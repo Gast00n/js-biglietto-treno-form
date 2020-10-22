@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquisto Biglietto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <section class="main">
+        <div class="title">
+            <h1>Boolean<span>Motive</span><br>
+            <small>Calcola il prezzo del tuo biglietto</small></h1>
+        </div>
+        <div class="input-dati">
+            <div class="row">
+                <div class="col">
+                    <label for="nome"> Inserire Nome e Cognome:</label>
+                    <input type="text" id="nome" placeholder="Inserisci il tuo nome">
+                </div>
+                <div class="col">
+                    <label for="km">Inserire i km da percorrere:</label>
+                    <input type="number" id="km" placeholder="Inserisci i km">
+                </div>
+                <div class="col">
+                    <label for="fascia-eta">Fascia di età</label>
+                    <select name="fascia-eta" id="fascia-eta">
+                        <option value="minorenne"> Minorenne </option>
+                        <option value="maggiorenne"> Maggiorenne </option>
+                        <option value="over65"> Over 65 </option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action">
+                <button id="generate" class="btn">Stampa</button>
+                <button id="reset" class="btn btn-white">Revoca</button>
+            </div>
+        </div>
+    </section>
+    <section id="print" class="hidden">
+        <!-- Generazione biglietto -->
+        <div class="nome">
+            <h3>
+                Nome Passeggero:
+                <span id="passeggero"></span>
+            </h3>
+        </div>
+        <div class="ticket">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Offerta Applicata</th>
+                        <th>Numero Vagone</th>
+                        <th>Codice CP</th>
+                        <th>Prezzo Finale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span id="sconto"></span>
+                        </td>
+                        <td>
+                            <span id="vagone"></span>
+                        </td>
+                        <td>
+                            <span id="codice"></span>
+                        </td>
+                        <td>
+                            <span id="prezzo"></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- JS INCLUDE -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
